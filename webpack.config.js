@@ -19,6 +19,11 @@ module.exports = {
         test: /\.less$/,
         use: ["style-loader", "css-loader", "less-loader"],
       },
+      {
+        // 使用 yarn add sass-loader sass -D 安装
+        test: /\.s[ac]ss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ]
   },
   plugins: [
