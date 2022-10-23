@@ -14,6 +14,11 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        // less-loader 版本不能太高，对于 webpack 5.74.0 ，安装命令为 yarn add less-loader@6 -D
+        test: /\.less$/,
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
     ]
   },
   plugins: [
