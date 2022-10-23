@@ -28,6 +28,15 @@ module.exports = {
         // yarn add -D stylus stylus-loader
         test: /\.styl$/,
         use: ["style-loader", "css-loader", "stylus-loader"]
+      },
+      {
+        test: /\.(png|jpe?g|gif|webp|svg)$/,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024, // 小于 10 K 的图片使用 base64 编码成字符串
+          }
+        }
       }
     ]
   },

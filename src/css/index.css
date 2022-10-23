@@ -1,0 +1,11 @@
+#box1 {
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/1.png);
+  background-size: cover;
+}
+
+div {
+  margin-top: 50px;
+  color: white;
+}
