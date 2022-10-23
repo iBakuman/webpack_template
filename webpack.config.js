@@ -20,10 +20,15 @@ module.exports = {
         use: ["style-loader", "css-loader", "less-loader"],
       },
       {
-        // 使用 yarn add sass-loader sass -D 安装
+        // 使用 yarn add -D sass-loader sass 安装
         test: /\.s[ac]ss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        // yarn add -D stylus stylus-loader
+        test: /\.styl$/,
+        use: ["style-loader", "css-loader", "stylus-loader"]
+      }
     ]
   },
   plugins: [
