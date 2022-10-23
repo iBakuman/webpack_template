@@ -5,8 +5,8 @@ module.exports = {
   // 使用 src/main.js 会报错
   entry: "./src/main.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: "main.js",
+    path: path.resolve(__dirname, 'dist'),// 所有文件输出的根目录
+    filename: "static/js/main.js",// 入口文件打包后输出的位置：为文件输出根目录 + 此处定义的路径。
   },
   module: {
     rules: [
@@ -36,6 +36,11 @@ module.exports = {
           dataUrlCondition: {
             maxSize: 10 * 1024, // 小于 10 K 的图片使用 base64 编码成字符串
           }
+        },
+        generator: {
+          // 输出图片的位置，相对于上面配置的根目录
+          // [hash:10] 表示取 hash 值的前十位作为文件名
+          filename: "static/images/[hash:10][ext][query]"
         }
       }
     ]
