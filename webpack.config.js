@@ -7,6 +7,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),// 所有文件输出的根目录
     filename: "static/js/main.js",// 入口文件打包后输出的位置：为文件输出根目录 + 此处定义的路径。
+    // 自动情况上次打包内容，webpack 5 新功能
+    clean: true
   },
   module: {
     rules: [
